@@ -3,7 +3,7 @@ var router = express.Router();
 
 const querystring = require('querystring');
 
-router.get('/brew', function(req, res) {
+router.get('/tea-machine/brew', function(req, res) {
     parseBody(req, res, function (body) {
         if (body.token !== process.env.VERIFICATION_TOKEN) {
             res.status(400);
