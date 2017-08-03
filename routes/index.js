@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/tea-machine/', function(req, res) {
+router.get('/', function(req, res) {
   if (typeof req.query.code !== 'undefined') {
       res.render('success', {});
       return;
