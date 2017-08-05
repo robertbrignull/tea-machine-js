@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "body-parser": "1.17.2",
-    "cookie-parser": "1.4.3",
     "debug": "2.6.8",
     "express": "4.15.3",
     "request": "2.81.0"
