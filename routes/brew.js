@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var https = require('https');
-
-const querystring = require('querystring');
+var request = require('request');
 
 router.post('/', function(req, res) {
     if (req.body.token !== process.env.VERIFICATION_TOKEN) {
