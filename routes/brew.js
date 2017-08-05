@@ -29,7 +29,12 @@ function parseBody(req, res, callback) {
         }
     });
     req.on('end', function () {
-        callback(querystring.parse(rawBody));
+        const parsedBody = {};
+        for (const line in rawBody.split("\n")) {
+            const lineParts = line.split("=");
+            parsedBody[lineParts[0]] = lineParts[1];
+        }
+        callback(parsedBody);
     });
 }
 
